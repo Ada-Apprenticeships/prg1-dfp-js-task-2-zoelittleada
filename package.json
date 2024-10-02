@@ -1,0 +1,15 @@
+{
+  "name": "prg1-dfp-js",
+  "version": "1.0.0",
+  "description": "Create a single function. The function must be capable of 'parsing' a UTF-8 encoded, plain text formatted file",
+  "main": "dfp.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
