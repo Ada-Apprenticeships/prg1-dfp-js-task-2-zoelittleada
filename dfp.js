@@ -24,13 +24,13 @@ function parseFile (indata, outdata, delimiter = ';') {
       //appends sentiment and shortened review to outdata file in correct format 
       fs.appendFileSync(outdata, `${sentiment}${delimiter}${shortenedReview}\n`, 'utf-8');
       count ++;
-      }
-
-    }catch (err) { 
-      console.error('Error parsing file:', err);
-      return -1;
     }
-    return count;
+
+  }catch (err) { 
+    console.error('Error parsing file:', err);
+    return -1;
+  }
+  return count;
 }
   
 parseFile('./datafile.csv', './outputfile.csv')
