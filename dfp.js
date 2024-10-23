@@ -19,10 +19,10 @@ function parseFile (indata, outdata, delimiter = ';') {
       
       //trims and splits lines so there are no white spaces and reviews are only 20 characters 
       const [review, sentiment] = line.split(delimiter).map(item => item.trim());
-      const shortReview = review.substring(0,20);
+      const shortenedReview = review.substring(0,20);
       
       //appends sentiment and shortened review to outdata file in correct format 
-      fs.appendFileSync(outdata, `${sentiment}${delimiter}${shortReview}\n`, 'utf-8');
+      fs.appendFileSync(outdata, `${sentiment}${delimiter}${shortenedReview}\n`, 'utf-8');
       count ++;
     }
 
